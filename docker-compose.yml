@@ -6,8 +6,8 @@ services:
     ports:
       - 54321:5432
     environment:
-      - POSTGRES_USER='your-db-user'
-      - POSTGRES_USER='your-db-pass'
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASS}
     image: postgres:14.4
     restart: unless-stopped
 
